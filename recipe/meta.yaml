@@ -1,5 +1,5 @@
 {% set name = "albucore" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: 7397ed7ddeada1f48185eceb7d55ec5c06e11a5a99ac13b1f60c07c5c3e01f3a
+  sha256: e9956ac4debc47e804f0677ff4e23939ba322986eac16e801f8ea1c98269db65
 
 build:
   noarch: python
