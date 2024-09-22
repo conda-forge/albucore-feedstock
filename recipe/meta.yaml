@@ -22,10 +22,10 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - numpy >=1.24.4,<2
+    - numpy >=1.24.4
     - tomli >=2.0.1
     - typing-extensions >=4.9.0
-    - opencv >=4.9.0.80
+    - opencv >=4.9.0
 
 test:
   imports:
