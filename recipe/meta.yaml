@@ -1,5 +1,5 @@
 {% set name = "albucore" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: 7397ed7ddeada1f48185eceb7d55ec5c06e11a5a99ac13b1f60c07c5c3e01f3a
+  sha256: a6d3042512cb0f06b2f0c3b77c8febae6098191c0f10e6160b64bf7f11e8328b
 
 build:
   noarch: python
@@ -22,10 +22,11 @@ requirements:
     - pip
   run:
     - python >=3.8
+    # https://github.com/albumentations-team/albucore/issues/34
     - numpy >=1.24.4,<2
     - tomli >=2.0.1
     - typing-extensions >=4.9.0
-    - opencv >=4.9.0.80
+    - opencv >=4.9.0
 
 test:
   imports:
