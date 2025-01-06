@@ -26,6 +26,7 @@ requirements:
     - tomli >=2.0.1
     - typing-extensions >=4.9.0
     - opencv >=4.9.0
+    - stringzilla >=3.10.4
 
 test:
   imports:
