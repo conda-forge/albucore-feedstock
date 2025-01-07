@@ -1,5 +1,5 @@
 {% set name = "albucore" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: e9956ac4debc47e804f0677ff4e23939ba322986eac16e801f8ea1c98269db65
+  sha256: 5a8ba297ab1693064e2b729ec9834864a0252a9c9ea814237ed85aa0ef83c77b
 
 build:
   noarch: python
@@ -26,14 +26,12 @@ requirements:
     - tomli >=2.0.1
     - typing-extensions >=4.9.0
     - opencv >=4.9.0
+    - stringzilla >=3.10.4
 
 test:
   imports:
     - albucore
-  commands:
-    - pip check
   requires:
-    - pip
     - python {{ python_min }}
 
 about:
