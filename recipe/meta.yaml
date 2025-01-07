@@ -1,5 +1,5 @@
 {% set name = "albucore" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: 5a8ba297ab1693064e2b729ec9834864a0252a9c9ea814237ed85aa0ef83c77b
+  sha256: 47af10db3581674df5c5b994f1b465f80d595a36744cfd60e14ed6ea82c5e9a0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,7 +23,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.24.4
-    - tomli >=2.0.1
     - typing-extensions >=4.9.0
     - opencv >=4.9.0
     - stringzilla >=3.10.4
@@ -31,8 +30,11 @@ requirements:
 test:
   imports:
     - albucore
+  commands:
+    - pip check
   requires:
     - python {{ python_min }}
+    - pip
 
 about:
   home: https://github.com/albumentations-team/albucore
