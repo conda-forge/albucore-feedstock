@@ -1,5 +1,5 @@
 {% set name = "albucore" %}
-{% set version = "0.0.41" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: dcf66228f5114e7aa0521a280fb032d1aca19d9e3d5a509a735329ffe39a75bb
+  sha256: eeade4089bf2588717cf6d8c9be0a5e369ffc07cc671fa685836889cb38212a2
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - typing-extensions >=4.9.0
     - opencv >=4.9.0
     - stringzilla >=3.10.4
-    - simsimd >=5.9.2
+    - numkong >=7.0.0
 
 test:
   imports:
