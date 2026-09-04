@@ -1,13 +1,13 @@
 {% set name = "albucore" %}
-{% set version = "0.2.9" %}
+{% set version = "0.2.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
-  sha256: c7d94e902371a533237cf4894b42881229b64e3afb8780d0de4ba254ace445a3
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/albucore-{{ version }}.tar.gz
+  sha256: 701d2081b61ae20e874a4c52fb54d573cb0ad4227853178f499436ba4a4496f2
 
 build:
   noarch: python
@@ -22,10 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.24.4
-    - typing-extensions >=4.9.0
-    - opencv >=4.9.0
-    - stringzilla >=3.10.4
-    - numkong >=7.0.0
+    - numkong >=7.8.0
+    - stringzilla >=5.1.2
+    - opencv >=5.0.0
+    - pytorch >=2.13.0
 
 test:
   imports:
